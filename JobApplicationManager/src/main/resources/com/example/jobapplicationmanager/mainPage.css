@@ -1,0 +1,136 @@
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-table-cell-border-color: transparent;
+    -fx-control-inner-background: #ffffff;
+    -fx-control-inner-background-alt: #f9f9f9;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);
+
+}
+
+/* Header design */
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #4A90E2, #357ABD);
+    -fx-background-radius: 10 10 0 0;
+    -fx-border-radius: 10 10 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-family: Arial;
+
+
+}
+
+.table-view .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Rows */
+.table-row-cell {
+    -fx-font-size: 13px;
+    -fx-text-fill: #333333;
+    -fx-padding: 6 10 6 10;
+    -fx-font-family: Arial;
+}
+
+.table-row-cell:filled:selected, .table-row-cell:filled:selected:hover {
+    -fx-background-color: linear-gradient(to right, #4A90E2, #357ABD);
+    -fx-text-fill: white;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #E3F2FD;
+}
+
+/* Scrollbars */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #c1c1c1;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #999999;
+}
+/* Label styling */
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Candara";
+}
+
+/* Specific label pentru titluri mari */
+.label.big-title {
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Chart common style */
+.chart {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 3);
+}
+
+/* Chart title */
+.chart-title {
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Legend styling */
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 5;
+}
+.chart-legend-item-symbol {
+    -fx-background-radius: 5;
+}
+.chart-legend-item {
+    -fx-text-fill: #555555;
+    -fx-font-size: 12px;
+}
+
+/* Pie chart colors */
+.default-color0.chart-pie { -fx-pie-color: #4CAF50; } /* Accepted - verde */
+.default-color1.chart-pie { -fx-pie-color: #F44336; } /* Rejected - roșu */
+.default-color2.chart-pie { -fx-pie-color: #FFC107; } /* Pending - galben */
+
+/* Prima bară (Applications) */
+.default-color0.chart-bar.data0 {
+    -fx-bar-fill: #2b2828;
+}
+
+/* A doua bară (Interviews) */
+.default-color0.chart-bar.data1 {
+    -fx-bar-fill: #519739;
+}
+
+/* Bar chart axis */
+.axis {
+    -fx-tick-label-fill: #000000;
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+}
+.axis-label {
+    -fx-text-fill: #000000;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+

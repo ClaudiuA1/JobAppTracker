@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobapplicationmanager.ControllerMainPage">
+   <content>
+      <AnchorPane id="jobDetails" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="759.0">
+          <Accordion layoutX="109.0" layoutY="125.0" />
+          <TableView fx:id="jobDetails" editable="true"   AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"  AnchorPane.topAnchor="60.0" AnchorPane.bottomAnchor="370.0" >
+            <columns>
+                <TableColumn fx:id="companyCol" prefWidth="60.799983978271484" text="Company" />
+                <TableColumn fx:id="titleCol" prefWidth="63.999969482421875" text="Job title" />
+                <TableColumn fx:id="appDateCol" prefWidth="108.79994201660156" text="Application Date" />
+                <TableColumn fx:id="testDateCol" prefWidth="130.4000244140625" text="Technical Test Date" />
+                <TableColumn fx:id="interviewCol" prefWidth="60.79998779296875" text="Interview" />
+                <TableColumn fx:id="resultCol" minWidth="8.0" prefWidth="60.79998779296875" text="Result" />
+                <TableColumn fx:id="accountCol" minWidth="8.0" prefWidth="118.40008544921875" text="Applicant Account" />
+                <TableColumn fx:id="linkCol" minWidth="8.0" prefWidth="101.5999755859375" text="Job post Link" />
+            </columns>
+          </TableView>
+         <Label layoutX="34.0" layoutY="33.0" text="Introduce you job applications into the table:">
+            <font>
+               <Font name="Candara Bold" size="24.0" />
+            </font>
+         </Label>
+         <PieChart fx:id="resultChart" layoutX="34.0" layoutY="310.0" prefHeight="274.0" prefWidth="316.0" title="Results chart" />
+         <BarChart fx:id="applicationsChart" layoutX="366.0" layoutY="311.0" prefHeight="272.0" prefWidth="378.0" title="Interview chart">
+           <xAxis>
+             <CategoryAxis side="BOTTOM" />
+           </xAxis>
+           <yAxis>
+             <NumberAxis side="LEFT" />
+           </yAxis>
+         </BarChart>
+      </AnchorPane>
+   </content>
+</ScrollPane>
