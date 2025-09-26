@@ -22,7 +22,7 @@ public class TableContent {
 
         this.applicationDate=LocalDate.now();
         this.interview="No";
-        this.result="PENDING";
+        this.result="Pending";
     }
 
     public TableContent(String companyName, String jobTitle, LocalDate applicationDate, LocalDate technicalTestDate, String interview, String result, String accountInfo, String link) {

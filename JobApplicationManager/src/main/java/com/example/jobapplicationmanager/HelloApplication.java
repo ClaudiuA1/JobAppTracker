@@ -24,7 +24,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Image img =new Image(Objects.requireNonNull(getClass().getResourceAsStream("JobAppLogo.png")));
-        scene.getStylesheets().add(getClass().getResource("mainPage.css").toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("mainPage.css")).toExternalForm());
 
         ControllerMainPage controller =fxmlLoader.getController();
 
