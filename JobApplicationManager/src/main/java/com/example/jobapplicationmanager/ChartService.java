@@ -33,9 +33,10 @@ public class ChartService {
 
         // Inițializare BarChart
         barSeries = new XYChart.Series<>();
-        barSeries.setName("Interview Stats");
+       // barSeries.setName("Interview Stats");
         barSeries.getData().add(new XYChart.Data<>("Applications", 0));
         barSeries.getData().add(new XYChart.Data<>("Interviews", 0));
+        applicationsChart.setLegendVisible(false);
         applicationsChart.getData().add(barSeries);
 
         NumberAxis yAxis = (NumberAxis) applicationsChart.getYAxis();

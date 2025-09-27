@@ -5,18 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<ScrollPane xmlns="http://javafx.com/javafx/17.0.12"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.jobapplicationmanager.ControllerMainPage"
-            fitToWidth="true" fitToHeight="true">
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jobapplicationmanager.ControllerMainPage">
 
     <content>
         <AnchorPane>
-            <TableView fx:id="jobDetails" editable="true"
-                       AnchorPane.leftAnchor="15.0"
-                       AnchorPane.rightAnchor="15.0"
-                       AnchorPane.topAnchor="60.0"
-                       AnchorPane.bottomAnchor="320.0">
+            <TableView fx:id="jobDetails" editable="true" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="60.0">
                 <columns>
                     <TableColumn fx:id="companyCol" text="Company" />
                     <TableColumn fx:id="titleCol" text="Job title" />
@@ -34,26 +27,22 @@
                     <Font name="Candara Bold" size="24.0" />
                 </font>
             </Label>
-            <Label fx:id="helpIcon" text="?" AnchorPane.topAnchor="10.0" AnchorPane.rightAnchor="10.0"
-                   style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-background-color: #4a90e2; -fx-text-fill: white; -fx-padding: 5; -fx-background-radius: 50;">
+            <Label fx:id="helpIcon"  style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-background-color: #2a7025; -fx-text-fill: white; -fx-padding: 5; -fx-background-radius: 50;" text="?" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
 
             </Label>
 
 
 
 
-            <HBox alignment="CENTER" spacing="15"
-                  AnchorPane.leftAnchor="0.0"
-                  AnchorPane.rightAnchor="0.0"
-                  AnchorPane.bottomAnchor="10.0">
+            <HBox alignment="CENTER" spacing="15" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                 <children>
-                    <PieChart fx:id="resultChart" prefHeight="285.0"  title="Results chart"/>
-                    <BarChart fx:id="applicationsChart" prefHeight="285.0"  title="Interview chart">
+                    <PieChart fx:id="resultChart" prefHeight="285.0" title="Results chart" />
+                    <BarChart fx:id="applicationsChart" prefHeight="285.0" title="Interview chart">
                         <xAxis>
-                            <CategoryAxis side="BOTTOM"/>
+                            <CategoryAxis side="BOTTOM" />
                         </xAxis>
                         <yAxis>
-                            <NumberAxis side="LEFT"/>
+                            <NumberAxis side="LEFT" />
                         </yAxis>
                     </BarChart>
                 </children>

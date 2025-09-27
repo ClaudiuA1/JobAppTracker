@@ -1,6 +1,6 @@
 .table-view {
-    -fx-background-color: #ffffff;
-    -fx-border-color: #e0e0e0;
+    -fx-background-color: #f7fff7;
+    -fx-border-color: #f8fff3;
     -fx-border-radius: 10;
     -fx-background-radius: 10;
     -fx-padding: 5;
@@ -13,7 +13,7 @@
 
 /* Header design */
 .table-view .column-header-background {
-    -fx-background-color: linear-gradient(to bottom, #4A90E2, #357ABD);
+    -fx-background-color: linear-gradient(to bottom, #47494a, #2a7025);
     -fx-background-radius: 10 10 0 0;
     -fx-border-radius: 10 10 0 0;
 }
@@ -35,18 +35,18 @@
 /* Rows */
 .table-row-cell {
     -fx-font-size: 13px;
-    -fx-text-fill: #333333;
+    -fx-text-fill: #ffffff;
     -fx-padding: 6 10 6 10;
     -fx-font-family: Arial;
 }
 
 .table-row-cell:filled:selected, .table-row-cell:filled:selected:hover {
-    -fx-background-color: linear-gradient(to right, #4A90E2, #357ABD);
+    -fx-background-color: linear-gradient(to right, #b4dcb4, #b0ddb0);
     -fx-text-fill: white;
 }
 
 .table-row-cell:hover {
-    -fx-background-color: #E3F2FD;
+    -fx-background-color: #e6fde3;
 }
 
 /* Scrollbars */

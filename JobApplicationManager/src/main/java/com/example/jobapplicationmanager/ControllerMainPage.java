@@ -13,6 +13,7 @@ import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.KeyCode;
+import javafx.util.Duration;
 
 import java.time.LocalDate;
 import java.util.function.BiConsumer;
@@ -57,6 +58,7 @@ public class ControllerMainPage {
         deleteRows();
         infoTip();
 
+
         // Populez tabelul din DB
         jobDetails.setItems(JobDao.getAllJobs());
         jobDetails.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
@@ -82,16 +84,21 @@ public class ControllerMainPage {
                 chartService.updateCharts(jobDetails.getItems()));
 
     }
-    private void infoTip(){
+    public void infoTip(){
         Tooltip tooltip = new Tooltip(
-                "Instrucțiuni:\n" +
-                        "• Pentru a șterge un rând: click dreapta pe rând\n" +
-                        "• Pentru a adăuga un rând nou: completați numele companiei în ultimul rând"
+                "Instructions:\n" +
+                        "• To add a row u have to enter the name of the company on your last row.\n" +
+                        "• To delete a row, u have to right click it and then select: Delete Row."
         );
-        helpIcon.setTooltip(tooltip);
 
-        // Asigură dimensiune minimă ca să fie vizibil
-        helpIcon.setMinSize(Label.USE_PREF_SIZE, Label.USE_PREF_SIZE);
+        // elimin delay-ul default de ~1s
+        tooltip.setShowDelay(Duration.ZERO);
+        tooltip.setShowDuration(Duration.INDEFINITE);
+        tooltip.setHideDelay(Duration.ZERO);
+
+        helpIcon.setTooltip(tooltip);
+        helpIcon.setFocusTraversable(true); // <--- asta e cheia, altfel uneori nu merge
+
     }
 
     private void deleteRows() {
